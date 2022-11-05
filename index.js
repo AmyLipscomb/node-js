@@ -1,35 +1,53 @@
+// Include package needed for this application
 const inquirer = require('inquirer');
 //^ This usually means you have to install the package. The package here that we need to install is 'Inquirer'
   //https://www.npmjs.com/package/inquirer
 
-  inquirer
+// Create an array of questions for user input
+inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'What is the title of your README?',
+      name: 'title',
     },
     {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
+        type: 'confirm',
+        message: "Do you want to add a section?",
+        name: 'wantSection'
     },
     {
-      type: 'confirm',
-      message: "Do you like Tacos?",
-      name: 'likeTaco',
+        type: 'input',
+        message: 'What is the name of your first section?',
+        name: 'title',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your first section?',
+        name: 'title',
     },
     {
       type: 'checkbox',
       message: "What Star Trek languages do you know?",
       choices: ["Clingon", "Human", "Vulcan"],
-      name: "sheldonParameter  "
+      name: "sheldonParameter"
     }
   ])
   .then((response) => {
-    console.log({response})
+    console.log({response});
 
     response.confirm === response.password
       ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-    });
+      : console.log('You forgot your password already?!');
+  });
+
+  
+
+// Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
