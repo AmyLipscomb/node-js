@@ -14,18 +14,54 @@ inquirer
     {
         type: 'confirm',
         message: "Do you want to add a section?",
-        name: 'wantSection'
+        name: 'wantSection',
     },
     {
         type: 'input',
         message: 'What is the name of your first section?',
-        name: 'title',
+        name: 'description', //each name has to be different so that it will run correctly in the terminal
     },
     {
         type: 'input',
-        message: 'What is the name of your first section?',
-        name: 'title',
+        message: 'What is the name of your second section?',
+        name: 'table-of-contents',
     },
+    {
+        type: 'input',
+        message: 'What is the name of your third section?',
+        name: 'installation',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your fourth section?',
+        name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your fifth section?',
+        name: 'license',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your sixth section?',
+        name: 'contributing',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your seventh section?',
+        name: 'tests',
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your eighth section?',
+        name: 'questions',
+    },
+    // {
+    //     type: 'input',
+    //     message: 'What is your Github username?',
+    //     name: 'github-user',
+    // },
+   
     {
       type: 'checkbox',
       message: "What Star Trek languages do you know?",
@@ -41,7 +77,7 @@ inquirer
       : console.log('You forgot your password already?!');
   });
 
-  
+
 
 // Create a function to write README file
 function writeToFile(fileName, data) {}
