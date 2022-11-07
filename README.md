@@ -1,26 +1,29 @@
-# <Node.js>
+# Node
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Coding is not the most intuitive language. Therefore, the importance of a README is immeasurable. The reason why is because a README holds several purposes. One purpose is to explain the work that's been created, in a way that anyone visiting one's repo (repository) can understand. Another purpose is to showcase the hard work that's been done, and highlight accomplishments, in addition to sharing what was learned throughout the process. For this project, my task was to create a README utilizing node. [Node](https://www.youtube.com/watch?v=TlB_eWDSMt4) is a "program that includes V8 JS engine (Google Chrome), plus additional modules that give us capabilities not in a browser." So what does this mean? It means that one can utilize JavaScript, without leaving the terminal! It is not a programming language, but instead is a "runtime environment for executing JavaScript code". To see the steps I've taken to create this README, please continue to read along. I hope you enjoy and learn something new!
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Test](#tests)
+
 
 ## Installation
-
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+
+1. Create a repository that includes node.
+2. Create a JavaScript file. This is done by typing the following line of code into the terminal:
+```
+node touch index.js
+```
+3. Within the JS file, the first line of code that should be written is:
+![const](./assets/images/constInquire.png)
 
 ## Usage
 
@@ -43,6 +46,30 @@ If you followed tutorials, include links to those here as well.
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+
+```
+MIT License
+
+Copyright (c) 2022 AmyLipscomb
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ---
 
