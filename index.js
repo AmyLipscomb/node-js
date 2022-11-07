@@ -56,17 +56,17 @@ inquirer
         message: 'What is the name of your eighth section?',
         name: 'questions',
     },
-    // {
-    //     type: 'input',
-    //     message: 'What is your Github username?',
-    //     name: 'github-user',
-    // },
+    {
+        type: 'input',
+        message: 'What is your Github username?',
+        name: 'github-user',
+    },
    
     {
       type: 'checkbox',
-      message: "What Star Trek languages do you know?",
-      choices: ["Clingon", "Human", "Vulcan"],
-      name: "sheldonParameter"
+      message: "What type of license do you want?",
+      choices: ["License preferred by the community", "MIT license", "GNU GPLv3"],
+      name: "licenseType"
     }
   ])
   .then((response) => {
