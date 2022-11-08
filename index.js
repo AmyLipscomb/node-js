@@ -1,89 +1,76 @@
 // Include package needed for this application
+const fs = require('fs');
+const path= require('path');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 //^ This usually means you have to install the package. The package here that we need to install is 'Inquirer'
   //https://www.npmjs.com/package/inquirer
 
 // Create an array of questions for user input
-inquirer
-  .prompt([
+const questions=[
     {
       type: 'input',
       message: 'What is the title of your README?',
       name: 'title',
     },
     {
-        type: 'confirm',
-        message: "Do you want to add a section?",
-        name: 'wantSection',
-    },
-    {
         type: 'input',
-        message: 'What is the name of your first section?',
-        name: 'description', //each name has to be different so that it will run correctly in the terminal
-    },
-    {
+        message: 'What is the description of your project?',
+        name: 'description',
+      },
+      {
         type: 'input',
-        message: 'What is the name of your second section?',
-        name: 'table-of-contents',
-    },
-    {
-        type: 'input',
-        message: 'What is the name of your third section?',
+        message: 'What packages were installed?',
         name: 'installation',
-    },
-    {
+      },
+      {
         type: 'input',
-        message: 'What is the name of your fourth section?',
+        message: 'Give details on your project usage.',
         name: 'usage',
-    },
-    {
+      },
+      {
         type: 'input',
-        message: 'What is the name of your fifth section?',
-        name: 'license',
-    },
-    {
+        message: 'Who contributed to this project?',
+        name: 'contribution',
+      },
+      {
         type: 'input',
-        message: 'What is the name of your sixth section?',
-        name: 'contributing',
-    },
-    {
-        type: 'input',
-        message: 'What is the name of your seventh section?',
+        message: 'What are some of the tests performed in your project?',
         name: 'tests',
-    },
-    {
-        type: 'input',
-        message: 'What is the name of your eighth section?',
-        name: 'questions',
-    },
+      },
     {
         type: 'input',
         message: 'What is your Github username?',
-        name: 'github-user',
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email',
     },
    
     {
-      type: 'checkbox',
+      type: 'list',
       message: "What type of license do you want?",
-      choices: ["License preferred by the community", "MIT license", "GNU GPLv3"],
+      choices: ["Apache 2.0 ", "MIT", "GNU GPLv3", "none"],
       name: "licenseType"
     }
-  ])
-  .then((response) => {
-    console.log({response});
-
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!');
-  });
+  ];
 
 
 
 // Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+   return fs.writeFileSync(path.join(fileName),data)
+    
+};
 
 // Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers)=>{
+        writeToFile("./output/README.md",generateMarkdown({...answers}))
+    })
+}
 
 // Function call to initialize app
 init();
