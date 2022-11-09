@@ -8,13 +8,12 @@ Coding is not the most intuitive. Therefore, the importance of a README is immea
 
 ## Table of Contents 
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contribution](#contribution)
-- [Test](#tests)
-- [Questions](#questions)
-
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contribution](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
 ## Installation
 
@@ -36,7 +35,7 @@ I first installed the package inquirer. Then I created two JavaScript files. One
 
 ## Contribution
 
- I worked on this project by myself, as well as utilized a tutoring session and office hours.
+  [Node Tutorial for Beginners](https://www.youtube.com/watch?v=TlB_eWDSMt4)
 
 ## License
 
